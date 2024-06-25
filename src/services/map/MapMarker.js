@@ -1,8 +1,8 @@
 import mapboxgl from 'mapbox-gl';
-import config from '../../config/env';
+//import config from '../../config/env';
 import UUIDV4 from 'uuid/v4';
 
-mapboxgl.accessToken = config.mapboxPublicKey;
+mapboxgl.accessToken = "pk.eyJ1IjoiZGFtYWlhIiwiYSI6ImNseHVtY3IyMDBlaXgya29ndG50ZmEzNm8ifQ._ic4lm5NLzuBLWozqwYiDg";
 
 export default class MapMarker {
   constructor(markerOptions) {

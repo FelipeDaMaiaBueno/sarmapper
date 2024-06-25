@@ -25,7 +25,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     const behavior = this.profiles.getClosestBehaviorByHierarchy(['hiker', 'temperate', 'mtn']);
-    const startPoint = {lat:  37.775754, lng: -119.348739};
+    const startPoint = {lat:  -24.762597, lng: -51.758262};
     this.props.updateMapCenter(startPoint);
     searchMap.setBehavior(behavior);
     searchMap.on('load', () => searchMap.setIPPMarker(startPoint));
