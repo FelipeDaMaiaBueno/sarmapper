@@ -55,16 +55,16 @@ class Sidebar extends React.Component {
       <div className="sidebar__wrapper">
         <div className="sidebar__content">
           <div className="sidebar__heading">
-            <h1 className="title">Lost Person Behavior Mapper</h1>
+            <h1 className="title">Mapeamento Inicial Busca Terrestre</h1>
             <div className="author">
-              by <a href="mailto: ryan@sarmapper.org">Ryan Villanueva</a>
+              feito por <a href="mailto: ryan@sarmapper.org">Ryan Villanueva,</a> e traduzido por <a>2° Ten. QOBM Pedro Arthur <b>Pierdoná</b></a>
             </div>
           </div>
           <div>
-            <SidebarSection name="Markers">
+            <SidebarSection name="Marcadores">
               <div className="sidebar-section__padding">
                 <MarkerManager
-                  name="Ponto de planejamento inicial"
+                  name="Ponto de Planejamento Inicial (PPI)"
                   lngLat={this.props.ipp ? this.props.ipp.lngLat : null}
                   setLngLat={(lngLat) => this.setMarkerLngLat("ipp", lngLat)}
                   remove={() => this.removeMarker("ipp")}
@@ -85,7 +85,7 @@ class Sidebar extends React.Component {
                 />
               </div>
             </SidebarSection>
-            <SidebarSection name="Statistical Behavior">
+            <SidebarSection name="Perfil Comportamental">
               <div className="sidebar-section__padding">
                 {this.props.behavior ? (
                   <ProfileSelector
@@ -97,7 +97,7 @@ class Sidebar extends React.Component {
                 {this.props.behavior ? (
                   <BehaviorStats behavior={this.props.behavior} />
                 ) : null}
-                <div className="source-reference">
+                <div className="Fonte">
                   Source:{" "}
                   <a href="https://www.dbs-sar.com/SAR_Research/ISRID.htm">
                     International Search &amp; Rescue Database
@@ -106,35 +106,35 @@ class Sidebar extends React.Component {
                 </div>
               </div>
             </SidebarSection>
-            <SidebarSection name="Export">
+            <SidebarSection name="Exportar">
               <div className="sidebar-section__padding">
                 <button onClick={downloadGPX}>Download GPX</button>
                 <button onClick={downloadKML}>Download KML</button>
               </div>
             </SidebarSection>
-            <SidebarSection name="About">
+            <SidebarSection name="Sobre">
               <div className="sidebar-section__padding bylines">
                 <p>
-                  Interface and visualization designed by{" "}
+                  Interface e visualização feita por{" "}
                   <a href="mailto:ryan@sarmapper.org">Ryan Villanueva</a>.
                 </p>
                 <p>
-                  Statistical behavior data from{" "}
-                  <a href="http://www.dbs-sar.com/">Lost Person Behavior</a> by
+                  Dados estatísticos de comportamento {" "}
+                  <a href="http://www.dbs-sar.com/">Lost Person Behavior</a> por
                   Robert Koester.
                   <br />
                 </p>
                 <p>
-                  Open source code available on{" "}
+                  Código-fonte disponível em{" "}
                   <a href="https://github.com/rvillanueva/sarmapper">Github</a>.
                 </p>
                 <p>
-                  The Lost Person Behavior Mapper does not guarantee that the
-                  information provided is 100% accurate. It is intended to be
-                  used as a supplemental tool for Search and Rescue efforts and
-                  cannot replace other search techniques. If you have a missing
-                  person to report, please contact your local law enforcement
-                  immediately.
+                  O Lost Person Behavior Mapper não garante que o
+                  as informações fornecidas são 100% precisas. Pretende-se que seja
+                  usado como uma ferramenta suplementar para esforços de busca e salvamento e
+                  não pode substituir outras técnicas de pesquisa. Se você estiver procurando
+                  uma pessoa desaparecida, entre em contato com as autoridades locais
+                  imediatamente.
                 </p>
               </div>
             </SidebarSection>

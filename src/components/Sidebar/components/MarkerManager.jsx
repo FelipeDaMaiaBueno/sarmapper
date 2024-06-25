@@ -66,14 +66,14 @@ export default class MarkerManager extends React.Component {
         ? <button onClick={() => this.setLngLatFromInput()}>Update</button>
         : null}
         <div>
-          <button onClick={() => this.props.setLngLat(this.props.mapLngLat)}>Set Here</button>
-          <button onClick={() => this.props.flyTo(this.props.lngLat)}>Go To</button>
-          <button onClick={() => this.props.remove()}>Clear</button>
+          <button onClick={() => this.props.setLngLat(this.props.mapLngLat)}>Centro do mapa</button>
+          <button onClick={() => this.props.flyTo(this.props.lngLat)}>Ir para</button>
+          <button onClick={() => this.props.remove()}>Limpar</button>
         </div>
       </div>
   }
   renderIfNoMarker() {
-    return <button onClick={() => this.props.setLngLat(this.props.mapLngLat)}>Add</button>
+    return <button onClick={() => this.props.setLngLat(this.props.mapLngLat)}>Adicionar</button>
   }
   render() {
     return (

@@ -1,5 +1,6 @@
 export const names = {
   profiles: {
+    general: "Geral",
     abandonedvehicle: "Veículo abandonado",
     abduction: "Rapto/sequestro",
     angler: "Pescador",
@@ -213,7 +214,16 @@ export const profiles = {
       n: 735,
       hierarchy: ["abduction"],
       distances: [0.3, 2.4, 19.3, 0],
-    },
+    }, 
+  },
+  general: {
+    children: null,
+    behavior: {
+      _id: "general",
+      n: 0,
+      hierarchy: ["general"],
+      distances: [0.2, 1.0, 2.0, 3.0],
+    }, 
   },
   angler: {
     children: {

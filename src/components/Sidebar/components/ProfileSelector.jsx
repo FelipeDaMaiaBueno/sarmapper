@@ -9,9 +9,9 @@ function BehaviorSelector({profiles, behavior, setBehaviorByKeys}) {
   }
   const levels = ['profiles', 'environments', 'terrain'];
   const levelNames = {
-    profiles: 'Profile',
-    environments: 'Environment',
-    terrain: 'Terrain'
+    profiles: 'Perfil',
+    environments: 'Clima',
+    terrain: 'Terreno'
   }
   const types = [
     names.profiles,
