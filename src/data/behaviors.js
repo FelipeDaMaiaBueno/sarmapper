@@ -66,6 +66,16 @@ export const dispersions = [
     },
   },
   {
+    hierarchy: ["general"],
+    n: 0,
+    angles: {
+      p25: 10,
+      p50: 30,
+      p75: 80,
+      p95: 150,
+    },
+  },
+  {
     hierarchy: ["child1to3", "temperate"],
     n: 36,
     angles: {
@@ -222,7 +232,7 @@ export const profiles = {
       _id: "general",
       n: 0,
       hierarchy: ["general"],
-      distances: [0.2, 1.0, 2.0, 3.0],
+      distances: [0.2, 1.0, 0.0, 10],
     }, 
   },
   angler: {
