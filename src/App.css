@@ -159,3 +159,21 @@ input.lng-lat-input {
     max-width: 80% !important;
   }
 }
+
+.hover-me::before{
+  content: 'YOU HOVERED!!';
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  display: none;
+}
+
+.hover-me{
+margin-top: 2em;
+}
+
+.hover-me:hover::before{
+  display: block;
+}

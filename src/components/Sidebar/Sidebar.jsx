@@ -57,20 +57,25 @@ class Sidebar extends React.Component {
           <div className="sidebar__heading">
             <h1 className="title">Mapeamento Inicial Busca Terrestre</h1>
             <div className="author">
-              feito por <a href="mailto: ryan@sarmapper.org">Ryan Villanueva,</a> e traduzido por <a>2° Ten. QOBM Pedro Arthur <b>Pierdoná</b></a>
+              feito por <a href="mailto: ryan@sarmapper.org">Ryan Villanueva,</a> e adaptado pelo <a>Sd. QPBM <b>Da Maia</b></a>
+            </div>
+            <div className="author">
+              Após pesquisa preliminar, insira o Ponto de Planejamento Inicial (PPI) da busca na aba Marcadores. 
+              Caso haja um perfil bem definido, é possível utilizar a base de dados como referência dos raios de probabilidade.
             </div>
           </div>
           <div>
             <SidebarSection name="Marcadores">
               <div className="sidebar-section__padding">
                 <MarkerManager
-                  name="Ponto de Planejamento Inicial (PPI)"
+                  name="Ponto de Planejamento Inicial (PPI)" 
                   lngLat={this.props.ipp ? this.props.ipp.lngLat : null}
                   setLngLat={(lngLat) => this.setMarkerLngLat("ipp", lngLat)}
                   remove={() => this.removeMarker("ipp")}
                   flyTo={(lngLat) => this.searchMap.flyTo(lngLat)}
                   mapLngLat={this.props.mapCenter}
                 />
+
                 <MarkerManager
                   name="Direção da viagem"
                   lngLat={
@@ -100,9 +105,16 @@ class Sidebar extends React.Component {
                 <div className="Fonte">
                   Source:{" "}
                   <a href="https://www.dbs-sar.com/SAR_Research/ISRID.htm">
-                    International Search &amp; Rescue Database
+                    International Search &amp; Rescue Incident Database
                   </a>{" "}
                   (2011)
+                  
+                  <div className="author">
+                    O perfil <b>“Geral”</b> NÃO faz parte da base de dados do ISRID. 
+                    É apenas uma adaptação realizada local e empiricamente para auxiliar o planejamento 
+                    das buscas quando o perfil comportamental da vítima não foi apurado.
+                  </div>
+
                 </div>
               </div>
             </SidebarSection>

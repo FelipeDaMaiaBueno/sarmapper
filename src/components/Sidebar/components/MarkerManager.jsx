@@ -75,16 +75,32 @@ export default class MarkerManager extends React.Component {
   renderIfNoMarker() {
     return <button onClick={() => this.props.setLngLat(this.props.mapLngLat)}>Adicionar</button>
   }
+
   render() {
-    return (
-      <div className="marker-manager">
-        <span className="marker__name">{this.props.name}</span>
-        {
-          this.props.lngLat
-          ? this.renderIfMarkerExists()
-          : this.renderIfNoMarker()
-        }
-      </div>
-    );
+    if (this.props.name == "Ponto de Planejamento Inicial (PPI)"){ //Inicio IF
+      return (
+        <div className="marker-manager">
+          <span className="marker__name">{this.props.name}
+          </span>
+          {
+            this.props.lngLat
+            ? this.renderIfMarkerExists()
+            : this.renderIfNoMarker()
+          }
+        </div>
+      );
+    } //Fim do IF
+    else{         // Inicio ELSE
+      return (
+        <div className="marker-manager">
+          <span className="marker__name">{this.props.name}</span>
+          {
+            this.props.lngLat
+            ? this.renderIfMarkerExists()
+            : this.renderIfNoMarker()
+          }
+        </div>
+      );
+    } //FIM DO ELSE
   }
 }
