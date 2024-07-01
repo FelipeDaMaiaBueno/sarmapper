@@ -79,6 +79,7 @@ h2 {
 }
 .behavior-selector__dropdown {
   flex: 1;
+  width: 200px;
 }
 .bylines {
   font-size: 10px;
