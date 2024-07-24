@@ -59,6 +59,11 @@ class Sidebar extends React.Component {
             <div className="author">
               feito por <a href="mailto: ryan@sarmapper.org">Ryan Villanueva,</a> e adaptado pelo <a>Sd. QPBM <b>Da Maia</b></a>
             </div>
+            <div className="=author">
+              <a className="author" href="https://12gb.notion.site/BUSCA-TERRESTRE-e4d175da04e04ff3b0b823d2e895c601">
+                      Clique aqui para Instruções de Uso
+              </a>
+            </div>
             <div className="author">
               Após pesquisa preliminar, insira o Ponto de Planejamento Inicial (PPI) da busca na aba Marcadores. 
               Caso haja um perfil bem definido, é possível utilizar a base de dados como referência dos raios de probabilidade.
