@@ -77,7 +77,7 @@ export default class MarkerManager extends React.Component {
   }
 
   render() {
-    if (this.props.name == "Ponto de Planejamento Inicial (PPI)"){ //Inicio IF
+    if (this.props.name == "Último Local Visto (ULV)"){ //Inicio IF
       return (
         <div className="marker-manager">
           <span className="marker__name">{this.props.name}

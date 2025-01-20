@@ -232,7 +232,7 @@ export const profiles = {
       _id: "general",
       n: 0,
       hierarchy: ["general"],
-      distances: [0.2, 1.0, 0.0, 10],
+      distances: [0.2, 1.0, 2.0, 10],
     }, 
   },
   angler: {
